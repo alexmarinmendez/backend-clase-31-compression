@@ -2,7 +2,9 @@
     const compression = require('compression')
 
     const app = express()
-    app.use(compression())
+    app.use(compression({
+        level: 6
+    }))
 
     const server = app.listen(8080, () => console.log('Server Up'))
 
